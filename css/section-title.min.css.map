@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,AAAC,CACb,aAAa,CAAE,IAAI,CAEnB,WAAW,CAAE,GAAG,CAChB,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,KAAK,CAClB,UAAU,CAAE,MAAM,CAClB,cAAc,CAAE,MAAM,CACtB,KAAK,CAAE,0BAA0B,CAClC",
+    "sources": [
+        "../saas/components/section-title.scss"
+    ],
+    "names": [],
+    "file": "section-title.min.css"
+}

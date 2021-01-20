@@ -1,0 +1,204 @@
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  transition: opacity var(--timing-duration) var(--timing-function),
+    visibility var(--timing-duration) var(--timing-function);
+
+  &.is-hidden {
+    transition: opacity var(--timing-duration) var(--timing-function) 500ms;
+    visibility: var(--timing-duration) var(--timing-function) 500ms;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(1);
+  /* в транзишн сделала задержку для модального окна (вначале появляется backtrop
+  а потом уже окно с задержкой) */
+  transition: transform var(--timing-duration) var(--timing-function) 500ms;
+
+  min-height: 581px;
+  min-width: 528px;
+  border-radius: 4px;
+  padding: 40px;
+
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform var(--timing-duration) var(--timing-function) 0ms;
+  }
+}
+
+.modal-btn-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 6px;
+
+  background-color: var(--white-bg-color);
+  cursor: pointer;
+}
+
+.modal-btn-close__icon {
+  transition: fill var(--timing-duration) var(--timing-function);
+
+  .modal-btn-close:hover &,
+  .modal-btn-close:focus & {
+    fill: var(--accent-color);
+  }
+}
+
+.modal__call-to-action {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--primary-title-color);
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__label {
+  margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  cursor: pointer;
+}
+
+.modal__form-field-wrapper {
+  position: relative;
+}
+
+.modal__icon {
+  position: absolute;
+  top: 0;
+  left: 12px;
+
+  transform: translateY(50%);
+  transition: fill var(--timing-duration) var(--timing-function);
+
+  .modal__form-field:focus + &,
+  .modal__form-field:hover + & {
+    fill: var(--accent-color);
+  }
+}
+
+.modal__form-field {
+  margin-bottom: 10px;
+
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 10px 0px 10px 42px;
+  border-radius: 4px;
+
+  color: var(--primary-text-color);
+  transition: border-color var(--timing-duration) var(--timing-function);
+
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+}
+
+.modal__form-field--textarea {
+  margin-bottom: 20px;
+  height: 120px;
+  padding: 12px 16px 12px 16px;
+
+  resize: none;
+  cursor: pointer;
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal__policy-label {
+  @include flex(center, center);
+
+  margin-bottom: 30px;
+
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.01em;
+
+  cursor: pointer;
+
+  &::before {
+    content: '';
+
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--primary-title-color);
+    border-radius: 4px;
+    margin-right: 9px;
+
+    display: inline-block;
+
+    transition: background-color var(--timing-duration) var(--timing-function),
+      border-color var(--timing-duration) var(--timing-function);
+
+    .modal__checkbox:checked + & {
+      background-image: url(../images/icon_check.svg);
+      background-color: var(--accent-color);
+      background-size: contain;
+      border-color: var(--accent-color);
+      background-origin: border-box;
+    }
+  }
+}
+
+.modal__policy-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+
+.modal__btn-wrapper {
+  text-align: center;
+}

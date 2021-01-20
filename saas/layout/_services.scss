@@ -1,0 +1,35 @@
+.services {
+  padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-list__thumb {
+  position: relative;
+}
+
+.services-list__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 27px 0;
+  text-align: center;
+
+  background: rgba(47, 48, 58, 0.8);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+}
