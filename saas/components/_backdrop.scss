@@ -4,7 +4,18 @@
   visibility: hidden;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .backdrop {
+  overflow-y: scroll;
+  // @media screen and (min-width: 320px) {
+  //   padding: 15px;
+  // }
+  // @media screen and (min-width: 769px) and (max-width: 1199px) {
+  //   padding: 208px 159px 208px 159px;
+  // }
   position: fixed;
   top: 0;
   left: 0;
@@ -34,10 +45,15 @@
   а потом уже окно с задержкой) */
   transition: transform var(--timing-duration) var(--timing-function) 500ms;
 
-  min-height: 581px;
-  min-width: 528px;
+  min-height: 609px;
+  min-width: 450px;
   border-radius: 4px;
   padding: 40px;
+
+  @media screen and (min-width: 1200px) {
+    min-height: 581px;
+    min-width: 528px;
+  }
 
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),

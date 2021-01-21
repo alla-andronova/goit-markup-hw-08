@@ -149,7 +149,7 @@ p {
 
 .common-btn {
   min-width: 200px;
-  padding: 10px 32px 10px 32px;
+  padding: 10px 29px 10px 29px;
   border-radius: 4px;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -439,6 +439,7 @@ p {
     padding-top: 60px;
     padding-bottom: 60px;
     min-height: 453px;
+    z-index: 1;
     display: none;
     position: absolute;
     top: 100%;
@@ -461,18 +462,49 @@ p {
 }
 
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .list-btn {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .list-btn {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .list-btn {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list-btn {
+    margin-bottom: 50px;
+  }
 }
 
 .list-btn__item:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .list-btn__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 .list-btn__button {
@@ -498,14 +530,27 @@ p {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+@media screen and (max-width: 767px) {
+  .portfolio-grid__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
-.portfolio-grid__item {
-  margin: 15px;
+@media screen and (min-width: 768px) {
+  .portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  .portfolio-grid__item {
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-grid__item {
+    width: calc((100% - 4 * 15px) / 2);
+  }
 }
 
 .portfolio-card {
@@ -549,6 +594,12 @@ p {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   padding: 20px 24px 20px 24px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-card__description {
+    min-height: 147px;
+  }
 }
 
 .portfolio-card__title {

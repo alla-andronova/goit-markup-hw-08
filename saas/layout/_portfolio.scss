@@ -1,14 +1,33 @@
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .list-btn {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
   &__item:not(:last-child) {
     margin-right: 8px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -43,12 +62,24 @@
 }
 
 .portfolio-grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+  @media screen and (max-width: 767px) {
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
 
-  &__item {
-    margin: 15px;
+    &__item {
+      margin: 15px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      &__item {
+        width: calc((100% - 4 * 15px) / 2);
+      }
+    }
   }
 }
 
@@ -96,6 +127,10 @@
 }
 
 .portfolio-card__description {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    min-height: 147px;
+  }
+
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
