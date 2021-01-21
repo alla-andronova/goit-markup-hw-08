@@ -159,35 +159,87 @@
           <ul class="services-list list">
             <li>
               <div class="services-list__thumb">
-                <img
-                  src="./images/about/about-img-1.jpg"
-                  alt="рабочий процесс"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/about/one.webp    1x,
+                      ./images/about/one@2x.webp 2x
+                    "
+                    media="(min-width:1200px) "
+                    type=" image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/about/one.jpg    1x,
+                      ./images/about/one@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
+
+                  <img
+                    class="team-list__img"
+                    src="./images/about/one.jpg"
+                    alt="рабочий процесс"
+                  />
+                </picture>
+
                 <h3 class="services-list__title">Десктопные приложения</h3>
               </div>
             </li>
 
             <li>
               <div class="services-list__thumb">
-                <img
-                  src="./images/about/about-img-2.jpg"
-                  alt="рабочий процесс"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/about/two.webp    1x,
+                      ./images/about/two@2x.webp 2x
+                    "
+                    media="(min-width:1200px) "
+                    type=" image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/about/two.jpg    1x,
+                      ./images/about/two@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
+
+                  <img
+                    class="team-list__img"
+                    src="./images/about/two.jpg"
+                    alt="рабочий процесс"
+                  />
+                </picture>
                 <h3 class="services-list__title">Мобильные приложения</h3>
               </div>
             </li>
             <li>
               <div class="services-list__thumb">
-                <img
-                  src="./images/about/about-img-3.jpg"
-                  alt="рабочий процесс"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/about/three.webp    1x,
+                      ./images/about/three@2x.webp 2x
+                    "
+                    media="(min-width:1200px) "
+                    type=" image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/about/three.jpg    1x,
+                      ./images/about/three@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
+
+                  <img
+                    class="team-list__img"
+                    src="./images/about/three.jpg"
+                    alt="рабочий процесс"
+                  />
+                </picture>
                 <h3 class="services-list__title">Дизайнерские решения</h3>
               </div>
             </li>
@@ -734,6 +786,7 @@
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
+      <!-- <div class="modal-container"> -->
       <div class="modal">
         <button
           type="button"
@@ -802,9 +855,9 @@
           />
 
           <label for="policy" class="modal__policy-label">
-            <span> Соглашаюсь с рассылкой и принимаю </span>
+            Соглашаюсь с рассылкой и принимаю &nbsp;
 
-            <a href="#" class="modal__policy-link"> Условия договора</a></label
+            <a href="#" class="modal__policy-link">Условия договора </a></label
           >
 
           <span class="modal__btn-wrapper">
@@ -812,6 +865,7 @@
           </span>
         </form>
       </div>
+      <!-- </div> -->
     </div>
     <script src="./js/modal.js"></script>
     <script>

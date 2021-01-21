@@ -220,11 +220,11 @@ body.modal-open {
 }
 
 .backdrop {
-  overflow-y: scroll;
+  padding: 15px;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 2;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -237,6 +237,7 @@ body.modal-open {
 }
 
 .modal {
+  overflow-y: scroll;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -244,18 +245,18 @@ body.modal-open {
   /* в транзишн сделала задержку для модального окна (вначале появляется backtrop
   а потом уже окно с задержкой) */
   transition: transform var(--timing-duration) var(--timing-function) 500ms;
-  min-height: 609px;
-  min-width: 450px;
+  width: 100%;
+  max-width: 528px;
   border-radius: 4px;
   padding: 40px;
   background-color: white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .modal {
-    min-height: 581px;
-    min-width: 528px;
+    max-height: 90vh;
+    max-width: 450px;
   }
 }
 
@@ -294,6 +295,7 @@ body.modal-open {
   line-height: 1.15;
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
+  text-align: center;
 }
 
 .modal__form {
@@ -365,10 +367,23 @@ body.modal-open {
   margin-bottom: 30px;
   text-align: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.166;
   letter-spacing: 0.01em;
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .modal__policy-label {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__policy-label {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 .modal__policy-label::before {
@@ -382,6 +397,12 @@ body.modal-open {
   transition: background-color var(--timing-duration) var(--timing-function), border-color var(--timing-duration) var(--timing-function);
 }
 
+@media screen and (max-width: 479px) {
+  .modal__policy-label::before {
+    margin-bottom: 10px;
+  }
+}
+
 .modal__checkbox:checked + .modal__policy-label::before {
   background-image: url(../images/icon_check.svg);
   background-color: var(--accent-color);
@@ -392,10 +413,17 @@ body.modal-open {
 
 .modal__policy-link {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.166;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__policy-link {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 .modal__btn-wrapper {
