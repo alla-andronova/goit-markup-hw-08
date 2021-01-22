@@ -22,6 +22,10 @@
   }
 
   &__address-wrapper {
+    @media screen and (max-width: 768px) {
+      margin-bottom: 60px;
+    }
+
     @media screen and (min-width: 768px) {
       margin-right: 165px;
     }
@@ -31,6 +35,10 @@
     }
   }
   &__social-wrapper {
+    @media screen and (max-width: 480px) {
+      margin-bottom: 60px;
+    }
+
     @media screen and (min-width: 1200px) {
       margin-right: 93px;
     }
@@ -48,11 +56,11 @@
   }
 }
 
-.contact-list {
-  @media screen and (max-width: 768px) {
-    margin-bottom: 60px;
-  }
-}
+// .contact-list {
+//   @media screen and (max-width: 768px) {
+//     margin-bottom: 60px;
+//   }
+// }
 
 .contact-list__text {
   margin-bottom: 9px;

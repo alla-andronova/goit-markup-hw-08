@@ -1,12 +1,9 @@
 .header {
   border-bottom: 1px solid #ececec;
   @media screen and (max-width: 767px) {
+    //  поиционирование для выпадающего моб меню
     position: relative;
     padding: 15px 0;
-  }
-
-  @media screen and (min-width: 768px) {
-    padding: 21px 0;
   }
 
   &__wrapper {
@@ -84,7 +81,7 @@
     border-radius: 2px;
 
     @media screen and (min-width: 768px) {
-      bottom: -22px;
+      bottom: -1px;
     }
   }
 }

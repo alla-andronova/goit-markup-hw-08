@@ -176,12 +176,6 @@ p {
   justify-content: center;
 }
 
-@media screen and (max-width: 480px) {
-  .social-list {
-    margin-bottom: 60px;
-  }
-}
-
 .social-list__item:not(:last-child) {
   margin-right: 10px;
 }
@@ -441,12 +435,6 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .header {
-    padding: 21px 0;
-  }
-}
-
 .header__wrapper {
   display: flex;
   align-items: center;
@@ -527,7 +515,7 @@ body.modal-open {
 
 @media screen and (min-width: 768px) {
   .header-nav-list__link--current::after {
-    bottom: -22px;
+    bottom: -1px;
   }
 }
 
@@ -867,6 +855,19 @@ body.modal-open {
   }
 }
 
+.team-list__item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--white-bg-color);
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 480px) and (max-width: 480px) {
+  .team-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-list {
     display: flex;
@@ -883,19 +884,6 @@ body.modal-open {
   .team-list {
     display: flex;
     justify-content: space-between;
-  }
-}
-
-.team-list__item {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  background-color: var(--white-bg-color);
-  padding-bottom: 30px;
-}
-
-@media screen and (max-width: 480px) {
-  .team-list__item {
-    margin-bottom: 30px;
   }
 }
 
@@ -1047,6 +1035,12 @@ body.modal-open {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .footer__address-wrapper {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .footer__address-wrapper {
     margin-right: 165px;
@@ -1056,6 +1050,12 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .footer__address-wrapper {
     margin-right: 70px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer__social-wrapper {
+    margin-bottom: 60px;
   }
 }
 
@@ -1074,12 +1074,6 @@ body.modal-open {
   text-transform: uppercase;
   display: inline-block;
   margin-bottom: 20px;
-}
-
-@media screen and (max-width: 768px) {
-  .contact-list {
-    margin-bottom: 60px;
-  }
 }
 
 .contact-list__text {
